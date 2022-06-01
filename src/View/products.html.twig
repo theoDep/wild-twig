@@ -9,9 +9,15 @@
 </head>
 
 <body>
-    {% for product in products %}
-    <li> {{product}} </li>
+<div class="container">
+    {% for product in products|slice (0,3) %}
+        {{product}} 
     {% endfor %}
+    <br/>
+    {% for product in products|slice (3,6) %}
+        {{product}}
+    {% endfor %}
+</div>
     {{dump(products)}}
 </body>
 </html>
