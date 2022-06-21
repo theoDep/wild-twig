@@ -10,13 +10,13 @@
 
 <body>
 <div class="container">
-    {% for product in products|slice (0,3) %}
-        {{product}} 
-    {% endfor %}
-    <br/>
-    {% for product in products|slice (3,6) %}
+    {% for product in products %}
+        {% if loop.index == 4 %}
+            <br />
+        {% endif %}
         {{product}}
     {% endfor %}
+    <br/>
 </div>
     {{dump(products)}}
 </body>
