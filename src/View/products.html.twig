@@ -11,12 +11,11 @@
 <body>
 <div class="container">
     {% for product in products %}
-        {% if loop.index == 4 %}
+        {{loop.index}}{{product}}
+        {% if loop.index % 3 == 0 %}
             <br />
         {% endif %}
-        {{product}}
     {% endfor %}
-    <br/>
 </div>
     {{dump(products)}}
 </body>
